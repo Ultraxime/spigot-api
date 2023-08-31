@@ -2,7 +2,12 @@ package fr.ultraxime.evenus.classes;
 
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
-import org.bukkit.scoreboard.*;
+import org.bukkit.scoreboard.Criteria;
+import org.bukkit.scoreboard.DisplaySlot;
+import org.bukkit.scoreboard.Objective;
+import org.bukkit.scoreboard.RenderType;
+import org.bukkit.scoreboard.Score;
+import org.bukkit.scoreboard.Team;
 
 import java.util.Objects;
 import java.util.Set;
@@ -60,76 +65,76 @@ public class Scoreboard implements org.bukkit.scoreboard.Scoreboard {
 
     @Override
     public Set<Objective> getObjectivesByCriteria(Criteria criteria) {
-        return null;
+        return this.scoreboard.getObjectivesByCriteria(criteria);
     }
 
     @Override
     public Set<Objective> getObjectives() {
-        return null;
+        return this.scoreboard.getObjectives();
     }
 
     @Override
-    public Objective getObjective(DisplaySlot displaySlot) {
-        return null;
+    public Objective getObjective(DisplaySlot slot) {
+        return this.scoreboard.getObjective(slot);
     }
 
     @Override
-    public Set<Score> getScores(OfflinePlayer offlinePlayer) {
-        return null;
+    public Set<Score> getScores(OfflinePlayer player) {
+        return this.scoreboard.getScores(player);
     }
 
     @Override
-    public Set<Score> getScores(String s) {
-        return null;
+    public Set<Score> getScores(String entry) {
+        return this.scoreboard.getScores(entry);
     }
 
     @Override
-    public void resetScores(OfflinePlayer offlinePlayer) {
-
+    public void resetScores(OfflinePlayer player) {
+        this.scoreboard.resetScores(player);
     }
 
     @Override
-    public void resetScores(String s) {
-
+    public void resetScores(String entry) {
+        this.scoreboard.resetScores(entry);
     }
 
     @Override
-    public Team getPlayerTeam(OfflinePlayer offlinePlayer) {
-        return null;
+    public Team getPlayerTeam(OfflinePlayer player) {
+        return this.scoreboard.getPlayerTeam(player);
     }
 
     @Override
-    public Team getEntryTeam(String s) {
-        return null;
+    public Team getEntryTeam(String entry) {
+        return this.scoreboard.getEntryTeam(entry);
     }
 
     @Override
-    public Team getTeam(String s) {
-        return null;
+    public Team getTeam(String teamName) {
+        return this.scoreboard.getTeam(teamName);
     }
 
     @Override
     public Set<Team> getTeams() {
-        return null;
+        return this.scoreboard.getTeams();
     }
 
     @Override
-    public Team registerNewTeam(String s) {
-        return null;
+    public Team registerNewTeam(String name) {
+        return this.scoreboard.getTeam(name);
     }
 
     @Override
     public Set<OfflinePlayer> getPlayers() {
-        return null;
+        return this.scoreboard.getPlayers();
     }
 
     @Override
     public Set<String> getEntries() {
-        return null;
+        return this.scoreboard.getEntries();
     }
 
     @Override
-    public void clearSlot(DisplaySlot displaySlot) {
-
+    public void clearSlot(DisplaySlot slot) {
+        this.scoreboard.clearSlot(slot);
     }
 }
